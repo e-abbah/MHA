@@ -1,0 +1,12 @@
+[build]
+  command = "yarn build"
+  publish = "build"          # or "dist" if Vite
+
+[build.environment]
+  NODE_OPTIONS = "--openssl-legacy-provider"
+  NODE_VERSION = "18"        # optional, ensures compatibility
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
